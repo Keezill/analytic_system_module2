@@ -7,8 +7,6 @@ out/
 *.iws
 src/basic/
 
-
-
 *.class
 .mtj.tmp/
 *.jar
