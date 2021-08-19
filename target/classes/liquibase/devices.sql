@@ -1,3 +1,11 @@
+DROP TABLE IF EXISTS "device";
+
+CREATE TABLE "device" (
+  id SERIAL PRIMARY KEY,
+  devicename varchar(255) default NULL,
+  subscriber_id INTEGER REFERENCES subscriber (id)
+);
+
 insert into device (subscriber_id, devicename) values ((select id from subscriber where id = 972), 'personal computer');
 insert into device (subscriber_id, devicename) values ((select id from subscriber where id = 1485), 'oppo');
 insert into device (subscriber_id, devicename) values ((select id from subscriber where id = 1649), 'siemens');

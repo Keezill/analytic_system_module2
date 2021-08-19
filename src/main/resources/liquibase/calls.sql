@@ -1,3 +1,11 @@
+DROP TABLE IF EXISTS "calls";
+
+CREATE TABLE "calls" (
+  id SERIAL PRIMARY KEY,
+  calllength_min integer NULL,
+  subscriber_id INTEGER REFERENCES subscriber (id)
+);
+
 insert into calls (subscriber_id, calllength_min) values ((select id from subscriber where id = 86), 1);
 insert into calls (subscriber_id, calllength_min) values ((select id from subscriber where id = 1859), 17);
 insert into calls (subscriber_id, calllength_min) values ((select id from subscriber where id = 1470), 19);

@@ -1,3 +1,10 @@
+DROP TABLE IF EXISTS "message";
+
+CREATE TABLE "message" (
+  id SERIAL PRIMARY KEY,
+  text varchar(255) default NULL,
+  subscriber_id INTEGER REFERENCES subscriber (id)
+);
 
 insert into message (subscriber_id, text) values ((select id from subscriber where id = 1), 'This is what I would have said.');
 insert into message (subscriber_id, text) values ((select id from subscriber where id = 1), 'You must account for your conduct.');

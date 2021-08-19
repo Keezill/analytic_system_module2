@@ -1,3 +1,11 @@
+DROP TABLE IF EXISTS "internet";
+
+CREATE TABLE "internet" (
+  id SERIAL PRIMARY KEY,
+  megabytes integer NULL,
+  subscriber_id INTEGER REFERENCES subscriber (id)
+);
+
 insert into internet (subscriber_id, megabytes) values ((select id from subscriber where id = 1969), 93958);
 insert into internet (subscriber_id, megabytes) values ((select id from subscriber where id = 113), 4224);
 insert into internet (subscriber_id, megabytes) values ((select id from subscriber where id = 108), 11486);

@@ -1,3 +1,11 @@
+DROP TABLE IF EXISTS "tariff";
+
+CREATE TABLE "tariff" (
+  id SERIAL PRIMARY KEY,
+  currenttariff varchar(255) default NULL,
+  subscriber_id INTEGER REFERENCES subscriber (id)
+);
+
 insert into tariff (subscriber_id, currenttariff) values ((select id from subscriber where id = 413), 'ocean of nets');
 insert into tariff (subscriber_id, currenttariff) values ((select id from subscriber where id = 162), 'messenger');
 insert into tariff (subscriber_id, currenttariff) values ((select id from subscriber where id = 1220), 'kyivstar');

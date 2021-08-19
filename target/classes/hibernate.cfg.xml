@@ -8,8 +8,7 @@
 
         <!-- JDBC Database connection settings -->
         <property name="connection.driver_class">org.postgresql.Driver</property>
-        <property name="connection.url">jdbc:postgresql://bxmpmdakspjxay:c2c2c0f7a7010d82b43c2b255ebdfd8b84986c901d5f7f3bede3653f62352218@ec2-18-211-41-246.compute-1.amazonaws.com:5432/d1toalp4e4fve8
-        </property>
+        <property name="connection.url">jdbc:postgresql://ec2-18-211-41-246.compute-1.amazonaws.com:5432/d1toalp4e4fve8?password=c2c2c0f7a7010d82b43c2b255ebdfd8b84986c901d5f7f3bede3653f62352218</property>
         <property name="connection.username">bxmpmdakspjxay</property>
         <property name="connection.password">c2c2c0f7a7010d82b43c2b255ebdfd8b84986c901d5f7f3bede3653f62352218</property>
         <!--<property name="connection.url">jdbc:postgresql://localhost/adv2module</property>
@@ -23,7 +22,7 @@
         <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
         <!-- Echo the SQL to stdout -->
-        <property name="show_sql">false</property>
+        <property name="show_sql">true</property>
 
         <!-- Set the current session context -->
         <property name="current_session_context_class">thread</property>

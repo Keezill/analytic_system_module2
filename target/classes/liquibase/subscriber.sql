@@ -1,3 +1,13 @@
+DROP TABLE IF EXISTS "subscriber";
+
+CREATE TABLE "subscriber" (
+  id SERIAL PRIMARY KEY,
+  name varchar(255) default NULL,
+  surname varchar(255) default NULL,
+  gender varchar(255) default NULL,
+  age integer NULL
+);
+
 insert into subscriber (name, surname, age, gender) values ('Harbert', 'Kearey', 27, 'Bigender');
 insert into subscriber (name, surname, age, gender) values ('Forrest', 'Toynbee', 60, 'Genderfluid');
 insert into subscriber (name, surname, age, gender) values ('Karissa', 'Norster', 31, 'Agender');

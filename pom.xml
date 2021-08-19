@@ -57,6 +57,7 @@
                     <configuration>
                         <propertyFile>liquibase.properties</propertyFile>
                         <changeLogFile>src/main/resources/liquibase/dbchangelog.xml</changeLogFile>
+                        <url>jdbc:postgresql://ec2-18-211-41-246.compute-1.amazonaws.com:5432/d1toalp4e4fve8?password=c2c2c0f7a7010d82b43c2b255ebdfd8b84986c901d5f7f3bede3653f62352218</url>
                     </configuration>
                     <executions>
                         <execution>
