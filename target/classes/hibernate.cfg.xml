@@ -1,0 +1,50 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- JDBC Database connection settings -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://bxmpmdakspjxay:c2c2c0f7a7010d82b43c2b255ebdfd8b84986c901d5f7f3bede3653f62352218@ec2-18-211-41-246.compute-1.amazonaws.com:5432/d1toalp4e4fve8
+        </property>
+        <property name="connection.username">bxmpmdakspjxay</property>
+        <property name="connection.password">c2c2c0f7a7010d82b43c2b255ebdfd8b84986c901d5f7f3bede3653f62352218</property>
+        <!--<property name="connection.url">jdbc:postgresql://localhost/adv2module</property>
+        <property name="connection.username">keezil</property>
+        <property name="connection.password">keezil</property>-->
+
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- Select our SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Echo the SQL to stdout -->
+        <property name="show_sql">false</property>
+
+        <!-- Set the current session context -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <!--<property name="hbm2ddl.auto">create-drop</property>-->
+
+        <!-- dbcp connection pool configuration -->
+        <property name="hibernate.dbcp.initialSize">5</property>
+        <property name="hibernate.dbcp.maxTotal">20</property>
+        <property name="hibernate.dbcp.maxIdle">10</property>
+        <property name="hibernate.dbcp.minIdle">5</property>
+        <property name="hibernate.dbcp.maxWaitMillis">-1</property>
+
+        <mapping class="entity.Calls" />
+        <mapping class="entity.Device" />
+        <mapping class="entity.InternetAccess" />
+        <mapping class="entity.Message" />
+        <mapping class="entity.Subscriber" />
+        <mapping class="entity.Tariff" />
+
+    </session-factory>
+
+</hibernate-configuration>
