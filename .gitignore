@@ -6,7 +6,7 @@ out/
 *.iml
 *.iws
 
-
+/target
 src/basic/
 *.class
 .mtj.tmp/
